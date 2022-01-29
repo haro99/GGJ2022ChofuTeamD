@@ -15,7 +15,11 @@ public class BoardController : MonoBehaviour
     [SerializeField] private GridLayoutGroup boardGridLayoutGroup;
     [SerializeField] private GameObject gridSquareObject;
 
+    // 各駒の初期配置の位置を定義
+    [SerializeField] private List<PiecePosition> defaultPieces;
+
     private List<Square> gridSquares = new List<Square>();
+    private List<Piece> pieces = new List<Piece>();
 
     private void GenerateBoardGrid()
     {
@@ -30,9 +34,24 @@ public class BoardController : MonoBehaviour
         }
     }
 
+    private void SpawnPieaces()
+    {
+        foreach(PiecePosition piecePosition in defaultPieces)
+        {
+            Square gridSquare = gridSquares.Find(g => g.boardPosition.x == piecePosition.position.x && g.boardPosition.y == piecePosition.position.y);
+            if(gridSquare != null)
+            {
+                Piece piece = ComponentUtil.InstantiateTo<Piece>(gridSquare.gameObject, piecePosition.pieceObj.gameObject);
+                piece.Initialize(gridSquare.boardPosition.x, gridSquare.boardPosition.y);
+                pieces.Add(piece);
+            }
+        }
+    }
+
     private void Awake()
     {
         GenerateBoardGrid();
+        SpawnPieaces();
     }
 
     // Start is called before the first frame update

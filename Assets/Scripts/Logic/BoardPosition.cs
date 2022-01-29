@@ -2,15 +2,10 @@
 using UnityEngine;
 
 [Serializable]
-public class BoardPosition
+public struct BoardPosition
 {
     [SerializeField] public int x;
     [SerializeField] public int y;
-
-    public BoardPosition()
-    {
-
-    }
 
     public BoardPosition(int x, int y)
     {
