@@ -2,15 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GridCell : MonoBehaviour
+// 普通のマス目
+public class Square : MonoBehaviour
 {
-    public int X { private set; get; }
-    public int Y { private set; get; }
+    public BoardPosition boardPosition { private set; get; }
 
     public void Initialize(int positionX, int positionY)
     {
-        this.X = positionX;
-        this.Y = positionY;
+        this.boardPosition = new BoardPosition(positionX, positionY);
     }
 
     // Start is called before the first frame update

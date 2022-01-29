@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5381820079494444887}
   - component: {fileID: 4698472421491949130}
   m_Layer: 5
-  m_Name: GridCell
+  m_Name: GridgridSquare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,6 +85,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 4804833961266466166}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 440732370f068489591054e027e3e8b0, type: 3}
+  m_Script: {fileID: 11500000, guid: 5dc0e284652564be588e74b53d4e54f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -9,8 +9,13 @@ public class BoardController : MonoBehaviour
     [SerializeField] private int boardWidth;
     // 盤面の縦幅のマス数(とりあえず10マス)
     [SerializeField] private int boardHeight;
+
+    [SerializeField] private List<BoardPosition> territoryPositions;
+
     [SerializeField] private GridLayoutGroup boardGridLayoutGroup;
-    [SerializeField] private GameObject gridCellObject;
+    [SerializeField] private GameObject gridSquareObject;
+
+    private List<Square> gridSquares = new List<Square>();
 
     private void GenerateBoardGrid()
     {
@@ -18,8 +23,9 @@ public class BoardController : MonoBehaviour
         {
             for (int j = 0; j < boardWidth; ++j)
             {
-                GridCell gridCell = ComponentUtil.InstantiateTo<GridCell>(boardGridLayoutGroup.gameObject, gridCellObject);
-                gridCell.Initialize(i, j);
+                Square gridSquare = ComponentUtil.InstantiateTo<Square>(boardGridLayoutGroup.gameObject, gridSquareObject);
+                gridSquare.Initialize(i, j);
+                gridSquares.Add(gridSquare);
             }
         }
     }

@@ -151,5 +151,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardWidth: 8
   boardHeight: 10
+  territoryPositions:
+  - x: 0
+    y: 0
+  - x: 0
+    y: 0
+  - x: 0
+    y: 0
+  - x: 0
+    y: 0
+  - x: 0
+    y: 0
+  - x: 0
+    y: 0
+  - x: 0
+    y: 0
+  - x: 0
+    y: 0
+  - x: 0
+    y: 0
+  - x: 0
+    y: 0
+  - x: 0
+    y: 0
+  - x: 0
+    y: 0
   boardGridLayoutGroup: {fileID: 5158562691942253928}
-  gridCellObject: {fileID: 4804833961266466166, guid: dd1cc334bff764a21a605eb4fc44ebe3, type: 3}
+  gridSquareObject: {fileID: 4804833961266466166, guid: dd1cc334bff764a21a605eb4fc44ebe3, type: 3}
